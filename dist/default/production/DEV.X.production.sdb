@@ -1,0 +1,937 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"5 C:\Users\Pola\MPLABXProjects\DEV.X\Button.c
+[e E834 . `uc
+BUTTON_RELEASED 0
+BUTTON_PRE_PRESSED 1
+BUTTON_PRESSED 2
+BUTTON_PRE_RELEASED 3
+]
+"9
+[e E869 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"14
+[e E829 . `uc
+BUTTON_PLUS 0
+BUTTON_MINUS 1
+BUTTON_DUST 2
+]
+"18
+[e E848 . `uc
+GPIO_PORTA 0
+GPIO_PORTB 1
+GPIO_PORTC 2
+GPIO_PORTD 3
+GPIO_PORTE 4
+]
+[e E855 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+[e E865 . `uc
+GPIO_OUTPUT_DIR 0
+GPIO_INPUT_DIR 1
+]
+"4 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[e E829 . `uc
+GPIO_PORTA 0
+GPIO_PORTB 1
+GPIO_PORTC 2
+GPIO_PORTD 3
+GPIO_PORTE 4
+]
+[e E846 . `uc
+GPIO_OUTPUT_DIR 0
+GPIO_INPUT_DIR 1
+]
+"28
+[e E836 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+"52
+[e E850 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"7 C:\Users\Pola\MPLABXProjects\DEV.X\LED.c
+[e E1 . `uc
+LED_DUST_INDICATOR 0
+]
+[e E4 . `uc
+LED_OFF 0
+LED_ON 1
+]
+"11
+[e E842 . `uc
+GPIO_PORTA 0
+GPIO_PORTB 1
+GPIO_PORTC 2
+GPIO_PORTD 3
+GPIO_PORTE 4
+]
+[e E849 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+[e E859 . `uc
+GPIO_OUTPUT_DIR 0
+GPIO_INPUT_DIR 1
+]
+"12
+[e E863 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"26 C:\Users\Pola\MPLABXProjects\DEV.X\main.c
+[e E880 . `uc
+LED_DUST_INDICATOR 0
+]
+[e E883 . `uc
+LED_OFF 0
+LED_ON 1
+]
+"28
+[e E912 . `uc
+SSD_LEFT 0
+SSD_CENTER 1
+SSD_RIGHT 2
+]
+[e E917 . `uc
+SSD_NO_DASH 0
+SSD_ONE_DASH 1
+SSD_TWO_DASH 2
+SSD_THREE_DASH 3
+]
+"34
+[e E847 . `uc
+MOTOR_ANGLE_10 10
+MOTOR_ANGLE_90 90
+MOTOR_ANGLE_140 140
+MOTOR_ANGLE_170 170
+]
+"36
+[e E893 . `uc
+BUTTON_PLUS 0
+BUTTON_MINUS 1
+BUTTON_DUST 2
+]
+"28 C:\Users\Pola\MPLABXProjects\DEV.X\OS.c
+[e E943 . `uc
+GPIO_PORTA 0
+GPIO_PORTB 1
+GPIO_PORTC 2
+GPIO_PORTD 3
+GPIO_PORTE 4
+]
+[e E950 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+"85
+[e E835 . `uc
+TIMER0 0
+TIMER1 1
+TIMER2 2
+]
+"100
+[e E960 . `uc
+GPIO_OUTPUT_DIR 0
+GPIO_INPUT_DIR 1
+]
+"5 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[e E829 . `uc
+TIMER0 0
+TIMER1 1
+TIMER2 2
+]
+[e E834 . `uc
+TIMER_MODE 0
+COUNTER_MODE 1
+]
+"14 C:\Users\Pola\MPLABXProjects\DEV.X\Display.c
+[e E868 . `uc
+VC_LOW_SPEED 0
+VC_MID_SPEED 1
+VC_HIGH_SPEED 2
+]
+"15
+[e E873 . `uc
+VC_DUST_BAG_EMPTY 0
+VC_DUST_BAG_FULL 1
+]
+"17
+[e E833 . `uc
+LED_DUST_INDICATOR 0
+]
+[e E836 . `uc
+LED_OFF 0
+LED_ON 1
+]
+"22
+[e E846 . `uc
+SSD_LEFT 0
+SSD_CENTER 1
+SSD_RIGHT 2
+]
+[e E851 . `uc
+SSD_NO_DASH 0
+SSD_ONE_DASH 1
+SSD_TWO_DASH 2
+SSD_THREE_DASH 3
+]
+"12 C:\Users\Pola\MPLABXProjects\DEV.X\Motor.c
+[e E930 . `uc
+MOTOR_SOFT_SWITCHING 0
+MOTOR_HARMONIC_REDUCTION 1
+]
+"14
+[e E1 . `uc
+MOTOR_ANGLE_10 10
+MOTOR_ANGLE_90 90
+MOTOR_ANGLE_140 140
+MOTOR_ANGLE_170 170
+]
+"26
+[e E845 . `uc
+GPIO_PORTA 0
+GPIO_PORTB 1
+GPIO_PORTC 2
+GPIO_PORTD 3
+GPIO_PORTE 4
+]
+[e E852 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+[e E862 . `uc
+GPIO_OUTPUT_DIR 0
+GPIO_INPUT_DIR 1
+]
+"28
+[e E866 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"5 C:\Users\Pola\MPLABXProjects\DEV.X\SSD.c
+[e E834 . `uc
+SSD_NO_DASH 0
+SSD_ONE_DASH 1
+SSD_TWO_DASH 2
+SSD_THREE_DASH 3
+]
+"19
+[e E829 . `uc
+SSD_LEFT 0
+SSD_CENTER 1
+SSD_RIGHT 2
+]
+"20
+[e E851 . `uc
+GPIO_PORTA 0
+GPIO_PORTB 1
+GPIO_PORTC 2
+GPIO_PORTD 3
+GPIO_PORTE 4
+]
+[e E868 . `uc
+GPIO_OUTPUT_DIR 0
+GPIO_INPUT_DIR 1
+]
+"21
+[e E858 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+"27
+[e E872 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"6 C:\Users\Pola\MPLABXProjects\DEV.X\VC.c
+[e E829 . `uc
+VC_LOW_SPEED 0
+VC_MID_SPEED 1
+VC_HIGH_SPEED 2
+]
+"7
+[e E834 . `uc
+VC_DUST_BAG_EMPTY 0
+VC_DUST_BAG_FULL 1
+]
+"26
+[e E865 . `uc
+MOTOR_ANGLE_10 10
+MOTOR_ANGLE_90 90
+MOTOR_ANGLE_140 140
+MOTOR_ANGLE_170 170
+]
+"27
+[e E846 . `uc
+BUTTON_PLUS 0
+BUTTON_MINUS 1
+BUTTON_DUST 2
+]
+[e E851 . `uc
+BUTTON_RELEASED 0
+BUTTON_PRE_PRESSED 1
+BUTTON_PRESSED 2
+BUTTON_PRE_RELEASED 3
+]
+"13 C:\Users\Pola\MPLABXProjects\DEV.X\Time.c
+[e E837 . `uc
+TIMER0 0
+TIMER1 1
+TIMER2 2
+]
+"13 C:\Users\Pola\MPLABXProjects\DEV.X\Button.c
+[v _Button_Init Button_Init `(v  1 e 1 0 ]
+"31
+[v _Button_GetState Button_GetState `(E834  1 e 1 0 ]
+"36
+[v _Button_GetPressingTime Button_GetPressingTime `(ui  1 e 2 0 ]
+"48
+[v _Button_Plus_Update Button_Plus_Update `(v  1 s 1 Button_Plus_Update ]
+"88
+[v _Button_Minus_Update Button_Minus_Update `(v  1 s 1 Button_Minus_Update ]
+"128
+[v _Button_Dust_Update Button_Dust_Update `(v  1 s 1 Button_Dust_Update ]
+"175
+[v _Button_Update Button_Update `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"7 C:\Users\Pola\MPLABXProjects\DEV.X\Display.c
+[v _Display_Init Display_Init `(v  1 e 1 0 ]
+"12
+[v _Display_Update Display_Update `(v  1 e 1 0 ]
+"3 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[v _GPIO_InitPort GPIO_InitPort `(v  1 e 1 0 ]
+"27
+[v _GPIO_InitPin GPIO_InitPin `(v  1 e 1 0 ]
+"51
+[v _GPIO_GetPinState GPIO_GetPinState `(E869  1 e 1 0 ]
+"78
+[v _GPIO_SetPortState GPIO_SetPortState `(v  1 e 1 0 ]
+"102
+[v _GPIO_SetPinState GPIO_SetPinState `(v  1 e 1 0 ]
+"126
+[v _GPIO_TogglePinState GPIO_TogglePinState `(v  1 e 1 0 ]
+"6 C:\Users\Pola\MPLABXProjects\DEV.X\LED.c
+[v _LED_Init LED_Init `(v  1 e 1 0 ]
+"17
+[v _LED_SetState LED_SetState `(v  1 e 1 0 ]
+"23 C:\Users\Pola\MPLABXProjects\DEV.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"19 C:\Users\Pola\MPLABXProjects\DEV.X\Motor.c
+[v _Motor_SetTargetAngle Motor_SetTargetAngle `(v  1 e 1 0 ]
+"24
+[v _Motor_Init Motor_Init `(v  1 e 1 0 ]
+"32
+[v _Motor_SoftSwitchingUpdate Motor_SoftSwitchingUpdate `(v  1 e 1 0 ]
+"59
+[v _Motor_HarmonicReductionUpdate Motor_HarmonicReductionUpdate `(v  1 e 1 0 ]
+"84
+[v _Motor_OutputUpdate Motor_OutputUpdate `(v  1 e 1 0 ]
+"14 C:\Users\Pola\MPLABXProjects\DEV.X\OS.c
+[v _OS_Schedule OS_Schedule `(v  1 e 1 0 ]
+"83
+[v _OS_Update OS_Update `II(v  1 e 1 0 ]
+"90
+[v _OS_Init OS_Init `(v  1 e 1 0 ]
+"18 C:\Users\Pola\MPLABXProjects\DEV.X\SSD.c
+[v _SSD_Init SSD_Init `(v  1 e 1 0 ]
+"43
+[v _SSD_SetSymbol SSD_SetSymbol `(v  1 e 1 0 ]
+"47
+[v _SSD_SetCtrlLine SSD_SetCtrlLine `(v  1 e 1 0 ]
+"66
+[v _SSD_Update SSD_Update `(v  1 e 1 0 ]
+"11 C:\Users\Pola\MPLABXProjects\DEV.X\Time.c
+[v _TIME_Init TIME_Init `(v  1 e 1 0 ]
+"16
+[v _TIME_TriggerTimeSandwichUS TIME_TriggerTimeSandwichUS `(v  1 e 1 0 ]
+"23
+[v _TIME_WaitTimeSandwich TIME_WaitTimeSandwich `(v  1 e 1 0 ]
+"30
+[v _TIME_TriggerDelayUS TIME_TriggerDelayUS `(v  1 e 1 0 ]
+"4 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[v _Timer_SetMode Timer_SetMode `(v  1 e 1 0 ]
+"17
+[v _Timer_SetInterruptEn Timer_SetInterruptEn `(v  1 e 1 0 ]
+"30
+[v _Timer_Init Timer_Init `(v  1 e 1 0 ]
+"44
+[v _Timer_SetTimeMS Timer_SetTimeMS `(v  1 e 1 0 ]
+[v i1_Timer_SetTimeMS Timer_SetTimeMS `(v  1 e 1 0 ]
+"60
+[v _Timer_SetTimeUS Timer_SetTimeUS `(v  1 e 1 0 ]
+"75
+[v _Timer_ClearInterruptFlag Timer_ClearInterruptFlag `(v  1 e 1 0 ]
+[v i1_Timer_ClearInterruptFlag Timer_ClearInterruptFlag `(v  1 e 1 0 ]
+"87
+[v _Timer_CheckInterruptFlag Timer_CheckInterruptFlag `(uc  1 e 1 0 ]
+"103
+[v _Timer_SetState Timer_SetState `(v  1 e 1 0 ]
+"9 C:\Users\Pola\MPLABXProjects\DEV.X\VC.c
+[v _VC_Init VC_Init `(v  1 e 1 0 ]
+"13
+[v _VC_GetSpeedLevel VC_GetSpeedLevel `(E868  1 e 1 0 ]
+"17
+[v _VC_GetDustState VC_GetDustState `(E873  1 e 1 0 ]
+"21
+[v _VC_Update VC_Update `(v  1 e 1 0 ]
+"5 C:\Users\Pola\MPLABXProjects\DEV.X\Button.c
+[v _ButtonState ButtonState `[3]E834  1 s 3 ButtonState ]
+"9
+[v _ButtonPrevSample ButtonPrevSample `[3]E869  1 s 3 ButtonPrevSample ]
+"11
+[v _Dust_Button_Pressing_Time Dust_Button_Pressing_Time `ui  1 s 2 Dust_Button_Pressing_Time ]
+"59 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"166
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"641
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"648
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"2569
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2629
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2635
+[v _PS0 PS0 `VEb  1 e 0 @1032 ]
+"2638
+[v _PS1 PS1 `VEb  1 e 0 @1033 ]
+"2641
+[v _PS2 PS2 `VEb  1 e 0 @1034 ]
+"2644
+[v _PSA PSA `VEb  1 e 0 @1035 ]
+"2845
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"2857
+[v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @132 ]
+"2860
+[v _T1CKPS1 T1CKPS1 `VEb  1 e 0 @133 ]
+"2878
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"2881
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"2884
+[v _TMR1CS TMR1CS `VEb  1 e 0 @129 ]
+"2887
+[v _TMR1IE TMR1IE `VEb  1 e 0 @1120 ]
+"2890
+[v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
+"2893
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"12 C:\Users\Pola\MPLABXProjects\DEV.X\Motor.c
+[v _Current_Motor_State Current_Motor_State `E930  1 s 1 Current_Motor_State ]
+"14
+[v _Target_Angle Target_Angle `E1  1 s 1 Target_Angle ]
+"15
+[v _Actual_Angle Actual_Angle `uc  1 s 1 Actual_Angle ]
+"16
+[v _Harmonic_Angle Harmonic_Angle `uc  1 s 1 Harmonic_Angle ]
+"17
+[v _OutputAngle OutputAngle `uc  1 s 1 OutputAngle ]
+"12 C:\Users\Pola\MPLABXProjects\DEV.X\OS.c
+[v _tick_flag tick_flag `VEuc  1 s 1 tick_flag ]
+"5 C:\Users\Pola\MPLABXProjects\DEV.X\SSD.c
+[v _Segments_Symbols_Array Segments_Symbols_Array `[3]E834  1 s 3 Segments_Symbols_Array ]
+"12
+[v _Symbol_Code_Array Symbol_Code_Array `DC[4]uc  1 s 4 Symbol_Code_Array ]
+"6 C:\Users\Pola\MPLABXProjects\DEV.X\VC.c
+[v _Speed_Level Speed_Level `E829  1 s 1 Speed_Level ]
+"7
+[v _Dust_Bag_State Dust_Bag_State `E834  1 s 1 Dust_Bag_State ]
+"23 C:\Users\Pola\MPLABXProjects\DEV.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"51
+} 0
+"9 C:\Users\Pola\MPLABXProjects\DEV.X\VC.c
+[v _VC_Init VC_Init `(v  1 e 1 0 ]
+{
+"12
+} 0
+"11 C:\Users\Pola\MPLABXProjects\DEV.X\Time.c
+[v _TIME_Init TIME_Init `(v  1 e 1 0 ]
+{
+"14
+} 0
+"18 C:\Users\Pola\MPLABXProjects\DEV.X\SSD.c
+[v _SSD_Init SSD_Init `(v  1 e 1 0 ]
+{
+[v SSD_Init@ssd ssd `E829  1 a 1 wreg ]
+[v SSD_Init@ssd ssd `E829  1 a 1 wreg ]
+[v SSD_Init@intial_symbol intial_symbol `E834  1 p 1 9 ]
+"20
+[v SSD_Init@ssd ssd `E829  1 a 1 11 ]
+"42
+} 0
+"3 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[v _GPIO_InitPort GPIO_InitPort `(v  1 e 1 0 ]
+{
+[v GPIO_InitPort@port port `E829  1 a 1 wreg ]
+[v GPIO_InitPort@port port `E829  1 a 1 wreg ]
+[v GPIO_InitPort@mask mask `uc  1 p 1 4 ]
+[v GPIO_InitPort@dir dir `E846  1 p 1 5 ]
+[v GPIO_InitPort@port port `E829  1 a 1 7 ]
+"25
+} 0
+"14 C:\Users\Pola\MPLABXProjects\DEV.X\OS.c
+[v _OS_Schedule OS_Schedule `(v  1 e 1 0 ]
+{
+"16
+[v OS_Schedule@Button_Counter Button_Counter `uc  1 s 1 Button_Counter ]
+"17
+[v OS_Schedule@Display_Counter Display_Counter `uc  1 s 1 Display_Counter ]
+"18
+[v OS_Schedule@VC_Counter VC_Counter `uc  1 s 1 VC_Counter ]
+"19
+[v OS_Schedule@Motor_SoftSwitch_Counter Motor_SoftSwitch_Counter `uc  1 s 1 Motor_SoftSwitch_Counter ]
+"20
+[v OS_Schedule@Motor_HarmonicReduction_Counter Motor_HarmonicReduction_Counter `uc  1 s 1 Motor_HarmonicReduction_Counter ]
+"81
+} 0
+"21 C:\Users\Pola\MPLABXProjects\DEV.X\VC.c
+[v _VC_Update VC_Update `(v  1 e 1 0 ]
+{
+"63
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 15 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 10 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 12 ]
+"25
+} 0
+"31 C:\Users\Pola\MPLABXProjects\DEV.X\Button.c
+[v _Button_GetState Button_GetState `(E834  1 e 1 0 ]
+{
+[v Button_GetState@button button `E829  1 a 1 wreg ]
+[v Button_GetState@button button `E829  1 a 1 wreg ]
+"33
+[v Button_GetState@button button `E829  1 a 1 4 ]
+"34
+} 0
+"36
+[v _Button_GetPressingTime Button_GetPressingTime `(ui  1 e 2 0 ]
+{
+[v Button_GetPressingTime@button button `E829  1 a 1 wreg ]
+"38
+[v Button_GetPressingTime@ret_val ret_val `ui  1 a 2 7 ]
+"36
+[v Button_GetPressingTime@button button `E829  1 a 1 wreg ]
+[v Button_GetPressingTime@button button `E829  1 a 1 9 ]
+"46
+} 0
+"66 C:\Users\Pola\MPLABXProjects\DEV.X\SSD.c
+[v _SSD_Update SSD_Update `(v  1 e 1 0 ]
+{
+"70
+[v SSD_Update@Current_Symbol Current_Symbol `E834  1 a 1 15 ]
+"68
+[v SSD_Update@Curr_Active_SSD Curr_Active_SSD `E829  1 s 1 Curr_Active_SSD ]
+"88
+} 0
+"47
+[v _SSD_SetCtrlLine SSD_SetCtrlLine `(v  1 e 1 0 ]
+{
+[v SSD_SetCtrlLine@ssd ssd `E829  1 a 1 wreg ]
+[v SSD_SetCtrlLine@ssd ssd `E829  1 a 1 wreg ]
+[v SSD_SetCtrlLine@state state `uc  1 p 1 9 ]
+[v SSD_SetCtrlLine@ssd ssd `E829  1 a 1 12 ]
+"64
+} 0
+"78 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[v _GPIO_SetPortState GPIO_SetPortState `(v  1 e 1 0 ]
+{
+[v GPIO_SetPortState@port port `E829  1 a 1 wreg ]
+[v GPIO_SetPortState@port port `E829  1 a 1 wreg ]
+[v GPIO_SetPortState@mask mask `uc  1 p 1 4 ]
+[v GPIO_SetPortState@state state `E850  1 p 1 5 ]
+[v GPIO_SetPortState@port port `E829  1 a 1 7 ]
+"100
+} 0
+"32 C:\Users\Pola\MPLABXProjects\DEV.X\Motor.c
+[v _Motor_SoftSwitchingUpdate Motor_SoftSwitchingUpdate `(v  1 e 1 0 ]
+{
+"57
+} 0
+"84
+[v _Motor_OutputUpdate Motor_OutputUpdate `(v  1 e 1 0 ]
+{
+"86
+[v Motor_OutputUpdate@Bias_Time_US Bias_Time_US `ui  1 a 2 17 ]
+"97
+} 0
+"30 C:\Users\Pola\MPLABXProjects\DEV.X\Time.c
+[v _TIME_TriggerDelayUS TIME_TriggerDelayUS `(v  1 e 1 0 ]
+{
+[v TIME_TriggerDelayUS@delay_us delay_us `ui  1 p 2 13 ]
+"34
+} 0
+"23
+[v _TIME_WaitTimeSandwich TIME_WaitTimeSandwich `(v  1 e 1 0 ]
+{
+"28
+} 0
+"87 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[v _Timer_CheckInterruptFlag Timer_CheckInterruptFlag `(uc  1 e 1 0 ]
+{
+[v Timer_CheckInterruptFlag@timer timer `E829  1 a 1 wreg ]
+"89
+[v Timer_CheckInterruptFlag@flag_state flag_state `uc  1 a 1 5 ]
+"87
+[v Timer_CheckInterruptFlag@timer timer `E829  1 a 1 wreg ]
+"89
+[v Timer_CheckInterruptFlag@timer timer `E829  1 a 1 4 ]
+"100
+} 0
+"16 C:\Users\Pola\MPLABXProjects\DEV.X\Time.c
+[v _TIME_TriggerTimeSandwichUS TIME_TriggerTimeSandwichUS `(v  1 e 1 0 ]
+{
+[v TIME_TriggerTimeSandwichUS@delay_us delay_us `ui  1 p 2 11 ]
+"21
+} 0
+"60 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[v _Timer_SetTimeUS Timer_SetTimeUS `(v  1 e 1 0 ]
+{
+[v Timer_SetTimeUS@timer timer `E829  1 a 1 wreg ]
+"62
+[v Timer_SetTimeUS@count_no count_no `ui  1 a 2 9 ]
+"60
+[v Timer_SetTimeUS@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetTimeUS@time time `ui  1 p 2 4 ]
+[v Timer_SetTimeUS@timer timer `E829  1 a 1 8 ]
+"73
+} 0
+"75
+[v _Timer_ClearInterruptFlag Timer_ClearInterruptFlag `(v  1 e 1 0 ]
+{
+[v Timer_ClearInterruptFlag@timer timer `E829  1 a 1 wreg ]
+[v Timer_ClearInterruptFlag@timer timer `E829  1 a 1 wreg ]
+[v Timer_ClearInterruptFlag@timer timer `E829  1 a 1 4 ]
+"86
+} 0
+"59 C:\Users\Pola\MPLABXProjects\DEV.X\Motor.c
+[v _Motor_HarmonicReductionUpdate Motor_HarmonicReductionUpdate `(v  1 e 1 0 ]
+{
+"82
+} 0
+"126 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[v _GPIO_TogglePinState GPIO_TogglePinState `(v  1 e 1 0 ]
+{
+[v GPIO_TogglePinState@port port `E829  1 a 1 wreg ]
+"128
+[v GPIO_TogglePinState@current_pin_state current_pin_state `E850  1 a 1 13 ]
+"126
+[v GPIO_TogglePinState@port port `E829  1 a 1 wreg ]
+[v GPIO_TogglePinState@pin pin `E836  1 p 1 10 ]
+"128
+[v GPIO_TogglePinState@port port `E829  1 a 1 14 ]
+"130
+} 0
+"12 C:\Users\Pola\MPLABXProjects\DEV.X\Display.c
+[v _Display_Update Display_Update `(v  1 e 1 0 ]
+{
+"15
+[v Display_Update@dust_bag_state dust_bag_state `E873  1 a 1 14 ]
+"14
+[v Display_Update@speed speed `E868  1 a 1 13 ]
+"41
+} 0
+"13 C:\Users\Pola\MPLABXProjects\DEV.X\VC.c
+[v _VC_GetSpeedLevel VC_GetSpeedLevel `(E868  1 e 1 0 ]
+{
+"16
+} 0
+"17
+[v _VC_GetDustState VC_GetDustState `(E873  1 e 1 0 ]
+{
+"20
+} 0
+"43 C:\Users\Pola\MPLABXProjects\DEV.X\SSD.c
+[v _SSD_SetSymbol SSD_SetSymbol `(v  1 e 1 0 ]
+{
+[v SSD_SetSymbol@ssd ssd `E829  1 a 1 wreg ]
+[v SSD_SetSymbol@ssd ssd `E829  1 a 1 wreg ]
+[v SSD_SetSymbol@symbol symbol `E834  1 p 1 4 ]
+"45
+[v SSD_SetSymbol@ssd ssd `E829  1 a 1 6 ]
+"46
+} 0
+"17 C:\Users\Pola\MPLABXProjects\DEV.X\LED.c
+[v _LED_SetState LED_SetState `(v  1 e 1 0 ]
+{
+[v LED_SetState@led led `E1  1 a 1 wreg ]
+[v LED_SetState@led led `E1  1 a 1 wreg ]
+[v LED_SetState@state state `E4  1 p 1 9 ]
+[v LED_SetState@led led `E1  1 a 1 11 ]
+"25
+} 0
+"175 C:\Users\Pola\MPLABXProjects\DEV.X\Button.c
+[v _Button_Update Button_Update `(v  1 e 1 0 ]
+{
+"180
+} 0
+"48
+[v _Button_Plus_Update Button_Plus_Update `(v  1 s 1 Button_Plus_Update ]
+{
+"50
+[v Button_Plus_Update@ButtonCurrSample ButtonCurrSample `E869  1 a 1 11 ]
+"86
+} 0
+"88
+[v _Button_Minus_Update Button_Minus_Update `(v  1 s 1 Button_Minus_Update ]
+{
+"90
+[v Button_Minus_Update@ButtonCurrSample ButtonCurrSample `E869  1 a 1 12 ]
+"126
+} 0
+"128
+[v _Button_Dust_Update Button_Dust_Update `(v  1 s 1 Button_Dust_Update ]
+{
+"130
+[v Button_Dust_Update@ButtonCurrSample ButtonCurrSample `E869  1 a 1 12 ]
+"173
+} 0
+"51 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[v _GPIO_GetPinState GPIO_GetPinState `(E869  1 e 1 0 ]
+{
+[v GPIO_GetPinState@port port `E829  1 a 1 wreg ]
+"53
+[v GPIO_GetPinState@state state `E850  1 a 1 9 ]
+"51
+[v GPIO_GetPinState@port port `E829  1 a 1 wreg ]
+[v GPIO_GetPinState@pin pin `E836  1 p 1 4 ]
+[v GPIO_GetPinState@port port `E829  1 a 1 8 ]
+"76
+} 0
+"90 C:\Users\Pola\MPLABXProjects\DEV.X\OS.c
+[v _OS_Init OS_Init `(v  1 e 1 0 ]
+{
+"101
+} 0
+"44 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[v _Timer_SetTimeMS Timer_SetTimeMS `(v  1 e 1 0 ]
+{
+[v Timer_SetTimeMS@timer timer `E829  1 a 1 wreg ]
+"46
+[v Timer_SetTimeMS@count_no count_no `ui  1 a 2 15 ]
+"44
+[v Timer_SetTimeMS@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetTimeMS@time time `ui  1 p 2 10 ]
+[v Timer_SetTimeMS@timer timer `E829  1 a 1 14 ]
+"58
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 8 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 4 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 6 ]
+"53
+} 0
+"103 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[v _Timer_SetState Timer_SetState `(v  1 e 1 0 ]
+{
+[v Timer_SetState@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetState@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetState@state state `uc  1 p 1 4 ]
+[v Timer_SetState@timer timer `E829  1 a 1 5 ]
+"114
+} 0
+"17
+[v _Timer_SetInterruptEn Timer_SetInterruptEn `(v  1 e 1 0 ]
+{
+[v Timer_SetInterruptEn@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetInterruptEn@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetInterruptEn@state state `uc  1 p 1 4 ]
+[v Timer_SetInterruptEn@timer timer `E829  1 a 1 5 ]
+"28
+} 0
+"30
+[v _Timer_Init Timer_Init `(v  1 e 1 0 ]
+{
+[v Timer_Init@timer timer `E829  1 a 1 wreg ]
+[v Timer_Init@timer timer `E829  1 a 1 wreg ]
+[v Timer_Init@timer timer `E829  1 a 1 6 ]
+"42
+} 0
+"4
+[v _Timer_SetMode Timer_SetMode `(v  1 e 1 0 ]
+{
+[v Timer_SetMode@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetMode@timer timer `E829  1 a 1 wreg ]
+[v Timer_SetMode@mode mode `E834  1 p 1 4 ]
+[v Timer_SetMode@timer timer `E829  1 a 1 5 ]
+"15
+} 0
+"24 C:\Users\Pola\MPLABXProjects\DEV.X\Motor.c
+[v _Motor_Init Motor_Init `(v  1 e 1 0 ]
+{
+[v Motor_Init@initial_target_angle initial_target_angle `E1  1 a 1 wreg ]
+[v Motor_Init@initial_target_angle initial_target_angle `E1  1 a 1 wreg ]
+"26
+[v Motor_Init@initial_target_angle initial_target_angle `E1  1 a 1 9 ]
+"31
+} 0
+"19
+[v _Motor_SetTargetAngle Motor_SetTargetAngle `(v  1 e 1 0 ]
+{
+[v Motor_SetTargetAngle@target_angle target_angle `E1  1 a 1 wreg ]
+[v Motor_SetTargetAngle@target_angle target_angle `E1  1 a 1 wreg ]
+"21
+[v Motor_SetTargetAngle@target_angle target_angle `E1  1 a 1 5 ]
+"22
+} 0
+"6 C:\Users\Pola\MPLABXProjects\DEV.X\LED.c
+[v _LED_Init LED_Init `(v  1 e 1 0 ]
+{
+[v LED_Init@led led `E1  1 a 1 wreg ]
+[v LED_Init@led led `E1  1 a 1 wreg ]
+[v LED_Init@inital_state inital_state `E4  1 p 1 9 ]
+[v LED_Init@led led `E1  1 a 1 11 ]
+"15
+} 0
+"102 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[v _GPIO_SetPinState GPIO_SetPinState `(v  1 e 1 0 ]
+{
+[v GPIO_SetPinState@port port `E829  1 a 1 wreg ]
+[v GPIO_SetPinState@port port `E829  1 a 1 wreg ]
+[v GPIO_SetPinState@pin pin `E836  1 p 1 4 ]
+[v GPIO_SetPinState@state state `E850  1 p 1 5 ]
+[v GPIO_SetPinState@port port `E829  1 a 1 8 ]
+"124
+} 0
+"7 C:\Users\Pola\MPLABXProjects\DEV.X\Display.c
+[v _Display_Init Display_Init `(v  1 e 1 0 ]
+{
+"11
+} 0
+"13 C:\Users\Pola\MPLABXProjects\DEV.X\Button.c
+[v _Button_Init Button_Init `(v  1 e 1 0 ]
+{
+[v Button_Init@button button `E829  1 a 1 wreg ]
+[v Button_Init@button button `E829  1 a 1 wreg ]
+[v Button_Init@button button `E829  1 a 1 10 ]
+"29
+} 0
+"27 C:\Users\Pola\MPLABXProjects\DEV.X\GPIO.c
+[v _GPIO_InitPin GPIO_InitPin `(v  1 e 1 0 ]
+{
+[v GPIO_InitPin@port port `E829  1 a 1 wreg ]
+[v GPIO_InitPin@port port `E829  1 a 1 wreg ]
+[v GPIO_InitPin@pin pin `E836  1 p 1 4 ]
+[v GPIO_InitPin@dir dir `E846  1 p 1 5 ]
+[v GPIO_InitPin@port port `E829  1 a 1 8 ]
+"49
+} 0
+"83 C:\Users\Pola\MPLABXProjects\DEV.X\OS.c
+[v _OS_Update OS_Update `II(v  1 e 1 0 ]
+{
+"88
+} 0
+"44 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[v i1_Timer_SetTimeMS Timer_SetTimeMS `(v  1 e 1 0 ]
+{
+[v i1Timer_SetTimeMS@timer timer `E829  1 a 1 wreg ]
+[v i1Timer_SetTimeMS@count_no Timer_SetTimeMS `ui  1 a 2 11 ]
+[v i1Timer_SetTimeMS@timer timer `E829  1 a 1 wreg ]
+[v i1Timer_SetTimeMS@time time `ui  1 p 2 6 ]
+[v i1Timer_SetTimeMS@timer timer `E829  1 a 1 10 ]
+"58
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+{
+[v i1___wmul@product __wmul `ui  1 a 2 4 ]
+[v i1___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v i1___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"75 C:\Users\Pola\MPLABXProjects\DEV.X\Timer.c
+[v i1_Timer_ClearInterruptFlag Timer_ClearInterruptFlag `(v  1 e 1 0 ]
+{
+[v i1Timer_ClearInterruptFlag@timer timer `E829  1 a 1 wreg ]
+[v i1Timer_ClearInterruptFlag@timer timer `E829  1 a 1 wreg ]
+[v i1Timer_ClearInterruptFlag@timer timer `E829  1 a 1 0 ]
+"86
+} 0
