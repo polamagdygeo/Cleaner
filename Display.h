@@ -3,7 +3,7 @@
 
 #include "Main.h"
 
-#define DISPLAY_PERIOD_MS                   20
+#define DISPLAY_PERIOD_MS                   20UL
 
 void Display_Init(void);
 void Display_Update(void);

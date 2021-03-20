@@ -11,8 +11,8 @@ void Display_Init(void)
 }
 void Display_Update(void)
 {   
-    tVC_Speed speed=VC_GetSpeedLevel();
-    tVC_DustBagState dust_bag_state=VC_GetDustState();
+    tVC_Speed speed = VC_GetSpeedLevel();
+    tVC_DustBagState dust_bag_state = VC_GetDustState();
     
    LED_SetState(LED_DUST_INDICATOR,dust_bag_state);
    

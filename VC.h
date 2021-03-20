@@ -3,7 +3,7 @@
 
 #include "Main.h"
 
-#define VC_PERIOD_MS                        20
+#define VC_PERIOD_MS                        20UL
 
 typedef enum{
     VC_LOW_SPEED,

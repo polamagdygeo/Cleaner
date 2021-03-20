@@ -2,18 +2,17 @@
 #include "GPIO.h"
 #include "Port.h"
 
-static tSSD_Symbol Segments_Symbols_Array[3]=
-{
+static tSSD_Symbol segments_current_symbol[SSD_COUNT] = {
     SSD_NO_DASH,
     SSD_NO_DASH,
     SSD_NO_DASH
 };
 
-static const u8 Symbol_Code_Array[4]={
+static const u8 symbol_codes[SSD_SYMBOL_COUNT] = {
                                 0,
-                                1<<3,
-                                1<<3|1<<6,
-                                1<<3|1<<6|1<<0};
+                                1 << 3,
+                                (1 << 3) | (1 << 6),
+                                (1 << 3) | (1 << 6) | (1 << 0)};
 
 void SSD_Init(tSSD ssd,tSSD_Symbol intial_symbol)
 {
@@ -40,10 +39,12 @@ void SSD_Init(tSSD ssd,tSSD_Symbol intial_symbol)
 
     SSD_SetSymbol(ssd,intial_symbol);
 }
+
 void SSD_SetSymbol(tSSD ssd,tSSD_Symbol symbol)
 {
-    Segments_Symbols_Array[ssd]=symbol;
+    segments_current_symbol[ssd] = symbol;
 }
+
 void SSD_SetCtrlLine(tSSD ssd,u8 state)
 {
     switch(ssd)
@@ -58,22 +59,21 @@ void SSD_SetCtrlLine(tSSD ssd,u8 state)
             GPIO_SetPinState(SSD_RIGHT_CTRL_PORT,SSD_RIGHT_CTRL_PIN,state);
         break;
         default:
-
             break;
     }
 }
 
 void SSD_Update(void)
 {
-    static tSSD Curr_Active_SSD=SSD_LEFT;
+    static tSSD Curr_Active_SSD = SSD_LEFT;
 
-    tSSD_Symbol Current_Symbol=Segments_Symbols_Array[Curr_Active_SSD];
+    tSSD_Symbol Current_Symbol = segments_current_symbol[Curr_Active_SSD];
 
     SSD_SetCtrlLine(SSD_LEFT,0);
     SSD_SetCtrlLine(SSD_CENTER,0);
     SSD_SetCtrlLine(SSD_RIGHT,0);
 
-    GPIO_SetPortState(SSD_PORT,SSD_PINS_MASK,Symbol_Code_Array[Current_Symbol]);
+    GPIO_SetPortState(SSD_PORT,SSD_PINS_MASK,symbol_codes[Current_Symbol]);
 
     SSD_SetCtrlLine(Curr_Active_SSD,1);
 
@@ -83,6 +83,6 @@ void SSD_Update(void)
     }
     else
     {
-        Curr_Active_SSD=SSD_LEFT;
+        Curr_Active_SSD = SSD_LEFT;
     }
 }

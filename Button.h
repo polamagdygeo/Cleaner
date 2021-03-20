@@ -3,12 +3,13 @@
 
 #include "Main.h"
 
-#define BUTTON_PERIOD_MS                    20
+#define BUTTON_PERIOD_MS                    20UL
 
 typedef enum{
     BUTTON_PLUS,
     BUTTON_MINUS,
-    BUTTON_DUST
+    BUTTON_DUST,
+    BUTTON_COUNT
 }tButton;
 
 typedef enum{

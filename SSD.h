@@ -3,19 +3,21 @@
 
 #include "Main.h"
 
-#define SSD_PERIOD_MS                       10
+#define SSD_PERIOD_MS                       10UL
 
 typedef enum{
     SSD_LEFT,
     SSD_CENTER,
-    SSD_RIGHT
+    SSD_RIGHT.
+    SSD_COUNT
 }tSSD;
 
 typedef enum{
     SSD_NO_DASH,
     SSD_ONE_DASH,
     SSD_TWO_DASH,
-    SSD_THREE_DASH
+    SSD_THREE_DASH,
+    SSD_SYMBOL_COUNT
 }tSSD_Symbol;
 
 void SSD_Init(tSSD ssd,tSSD_Symbol intial_symbol);

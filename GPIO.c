@@ -55,19 +55,19 @@ tGPIO_State GPIO_GetPinState(tGPIO_Port port,tGPIO_Pin pin)
     switch(port)
     {
         case GPIO_PORTA:
-            state=GPIO_PIN_READ(GPIO_PORTA_DATA_REG,pin);
+            state = GPIO_PIN_READ(GPIO_PORTA_DATA_REG,pin);
         break;
         case GPIO_PORTB:
-            state=GPIO_PIN_READ(GPIO_PORTB_DATA_REG,pin);
+            state = GPIO_PIN_READ(GPIO_PORTB_DATA_REG,pin);
         break;
         case GPIO_PORTC:
-            state=GPIO_PIN_READ(GPIO_PORTC_DATA_REG,pin);
+            state = GPIO_PIN_READ(GPIO_PORTC_DATA_REG,pin);
         break;
         case GPIO_PORTD:
-            state=GPIO_PIN_READ(GPIO_PORTD_DATA_REG,pin);
+            state = GPIO_PIN_READ(GPIO_PORTD_DATA_REG,pin);
         break;
         case GPIO_PORTE:
-            state=GPIO_PIN_READ(GPIO_PORTE_DATA_REG,pin);
+            state = GPIO_PIN_READ(GPIO_PORTE_DATA_REG,pin);
         break;
         default:
         break;
@@ -125,7 +125,7 @@ void GPIO_SetPinState(tGPIO_Port port,tGPIO_Pin pin,tGPIO_State state)
 
 void GPIO_TogglePinState(tGPIO_Port port,tGPIO_Pin pin)
 {
-    tGPIO_State current_pin_state=GPIO_GetPinState(port,pin);
+    tGPIO_State current_pin_state = GPIO_GetPinState(port,pin);
     GPIO_SetPinState(port,pin,~current_pin_state);
 }
 

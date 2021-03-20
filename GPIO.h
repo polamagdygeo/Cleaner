@@ -34,12 +34,9 @@ typedef enum{
 
 void GPIO_InitPin(tGPIO_Port port,tGPIO_Pin pin,tGPIO_Dir dir);
 void GPIO_InitPort(tGPIO_Port port,u8 mask,tGPIO_Dir dir);
-
 tGPIO_State GPIO_GetPinState(tGPIO_Port port,tGPIO_Pin pin);
-
 void GPIO_SetPinState(tGPIO_Port port,tGPIO_Pin pin,tGPIO_State state);
 void GPIO_SetPortState(tGPIO_Port port,u8 mask,tGPIO_State state);
-
 void GPIO_TogglePinState(tGPIO_Port port,tGPIO_Pin pin);
 
 #endif // GPIO_H_INCLUDED

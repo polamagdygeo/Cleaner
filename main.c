@@ -22,7 +22,6 @@
 
 int main(void)
 {
-    u16 time;
     LED_Init(LED_DUST_INDICATOR,LED_OFF);
 
     SSD_Init(SSD_LEFT,SSD_NO_DASH);
@@ -42,9 +41,10 @@ int main(void)
     TIME_Init();
 
     OS_Init();
+
     while(1)
     {
-        OS_Schedule();
+        OS_ScheduleAndDispatch();
     }
 
     return 0;

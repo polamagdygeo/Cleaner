@@ -20,9 +20,7 @@ void Timer_SetTimeMS(tTimer timer,u16 time);
 void Timer_SetTimeUS(tTimer timer,u16 time);
 void Timer_SetInterruptEn(tTimer timer,u8 state);
 void Timer_ClearInterruptFlag(tTimer timer);
-
 u8 Timer_CheckInterruptFlag(tTimer timer);
-
 void Timer_SetState(tTimer timer,u8 state);
 
 #endif // TIMER_H_INCLUDED

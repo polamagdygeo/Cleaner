@@ -9,16 +9,16 @@ typedef enum{
     MOTOR_HARMONIC_REDUCTION
 }tMotor_State;
 
-static tMotor_State Current_Motor_State=MOTOR_SOFT_SWITCHING;
+static tMotor_State motor_current_state = MOTOR_SOFT_SWITCHING;
 
-static tMotor_TargetAngle Target_Angle;
-static u8 Actual_Angle=MOTOR_ANGLE_170;
-static u8 Harmonic_Angle;
-static u8 OutputAngle=MOTOR_ANGLE_170;
+static tMotor_TargetAngle motor_set_angle;
+static u8 motor_current_angle = MOTOR_ANGLE_170;
+static u8 motor_harmonic_angle;
+static u8 motor_actual_output_angle = MOTOR_ANGLE_170;
 
 void Motor_SetTargetAngle(tMotor_TargetAngle target_angle)
 {
-    Target_Angle=target_angle;
+    motor_set_angle = target_angle;
 }
 
 void Motor_Init(tMotor_TargetAngle initial_target_angle)
@@ -29,27 +29,28 @@ void Motor_Init(tMotor_TargetAngle initial_target_angle)
 
     Motor_SetTargetAngle(initial_target_angle);
 }
+
 void Motor_SoftSwitchingUpdate(void)
 {
-    if(Current_Motor_State == MOTOR_SOFT_SWITCHING)
+    if(motor_current_state == MOTOR_SOFT_SWITCHING)
     {
-        if(Actual_Angle == Target_Angle)
+        if(motor_current_angle == motor_set_angle)
         {
-            Current_Motor_State=MOTOR_HARMONIC_REDUCTION;
-            Harmonic_Angle=Actual_Angle+HARMONIC_REDUCTION_DELTA;
+            motor_current_state = MOTOR_HARMONIC_REDUCTION;
+            motor_harmonic_angle = motor_current_angle+HARMONIC_REDUCTION_DELTA;
         }
         else
         {
-            if(Actual_Angle > Target_Angle)
+            if(motor_current_angle > motor_set_angle)
             {
-                Actual_Angle--;
+                motor_current_angle--;
             }
             else
             {
-                Actual_Angle++;
+                motor_current_angle++;
             }
 
-             OutputAngle=Actual_Angle;
+             motor_actual_output_angle = motor_current_angle;
         }
 
     }
@@ -58,34 +59,34 @@ void Motor_SoftSwitchingUpdate(void)
 
 void Motor_HarmonicReductionUpdate(void)
 {
-    if(Current_Motor_State == MOTOR_HARMONIC_REDUCTION)
+    if(motor_current_state == MOTOR_HARMONIC_REDUCTION)
     {
-        if(Actual_Angle != Target_Angle)
+        if(motor_current_angle != motor_set_angle)
         {
-            Current_Motor_State=MOTOR_SOFT_SWITCHING;
+            motor_current_state = MOTOR_SOFT_SWITCHING;
         }
-        else if(Target_Angle-HARMONIC_REDUCTION_DELTA >= 10 &&
-                Target_Angle+HARMONIC_REDUCTION_DELTA <= 170)
+        else if((motor_set_angle - HARMONIC_REDUCTION_DELTA) >= 10 &&
+                ((motor_set_angle + HARMONIC_REDUCTION_DELTA) <= 170))
         {
-            if(Harmonic_Angle > Target_Angle)
+            if(motor_harmonic_angle > motor_set_angle)
             {
-                Harmonic_Angle-=HARMONIC_REDUCTION_DELTA*2;
+                motor_harmonic_angle -= (HARMONIC_REDUCTION_DELTA * 2);
             }
-            else if(Harmonic_Angle < Target_Angle)
+            else if(motor_harmonic_angle < motor_set_angle)
             {
-                Harmonic_Angle+=HARMONIC_REDUCTION_DELTA*2;
+                motor_harmonic_angle += (HARMONIC_REDUCTION_DELTA * 2);
             }
 
-            OutputAngle=Harmonic_Angle;
+            motor_actual_output_angle = motor_harmonic_angle;
         }
     }
 }
 
 void Motor_OutputUpdate(void)
 {
-    u16 Bias_Time_US=(55*(OutputAngle-10));
+    u16 bias_time_us = (55 * (motor_actual_output_angle - 10));
 
-    TIME_TriggerDelayUS(Bias_Time_US);
+    TIME_TriggerDelayUS(bias_time_us);
 
     GPIO_SetPinState(MOTOR_PORT,MOTOR_PIN,GPIO_HIGH);
 
@@ -93,5 +94,5 @@ void Motor_OutputUpdate(void)
 
     GPIO_SetPinState(MOTOR_PORT,MOTOR_PIN,GPIO_LOW);
 
-    TIME_TriggerDelayUS((55*160)-Bias_Time_US);
+    TIME_TriggerDelayUS((55*160) - bias_time_us);
 }
